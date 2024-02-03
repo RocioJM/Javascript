@@ -3,7 +3,6 @@
 {
     function Ordenacion (arr = undefined)
     {
-        let tiempoInicio = new Date().getTime();
         if(arr === undefined) return console.warn("No ingesaste un arreglo de numeros.");
         if(!Array.isArray(arr)) return console.error("El valor que ingresastes no es un arreglo.");
         if(arr.length===0) return console.error("El arreglo esta vacio.");
@@ -40,13 +39,10 @@
             }
         }
 
-        let tiempoFin = new Date().getTime();
         console.log({
             arr,
             ordenAscendente,
-            ordenDescendente,
-            tiempoInicio,
-            tiempoFin
+            ordenDescendente
         });
         
     }
@@ -60,20 +56,39 @@
 
 //25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
 //Version1
-// {
-//     function EliminarDuplicados (arr = undefined)
-//     {
-//         if(arr === undefined) return console.warn("No ingesaste un arreglo de numeros.");
-//         if(!Array.isArray(arr)) return console.error("El valor que ingresastes no es un arreglo.");
-//         if(arr.length===0) return console.error("El arreglo esta vacio.");
-//         for(let num of arr)
-//         {
-//             if(typeof num !== "number") return console.error(`El valor "${num}" ingresado, NO es un numero.`);
-//         }
+{
+    function EliminarDuplicados (arr = undefined)
+    {
+        if(arr === undefined) return console.warn("No ingesaste un arreglo de numeros.");
+        if(!Array.isArray(arr)) return console.error("El valor que ingresastes no es un arreglo.");
+        if(arr.length===0) return console.error("El arreglo esta vacio.");
 
-//         Array.
-//     }
-// }
+        let arraySinDuplicados = new Array;
+        for(let i=0; i<arr.length;i++)
+        {
+            if(arraySinDuplicados.length >0)
+            {
+                let EstaRepetido = false;
+                for(let j=0; j<arraySinDuplicados.length; j++){
+                    
+                    if(arr[i]==arraySinDuplicados[j])
+                    {
+                        EstaRepetido=true;
+                    }
+                }
+                if(!EstaRepetido)
+                {
+                    arraySinDuplicados.push(arr[i]);
+                }
+            }else{
+                arraySinDuplicados.push(arr[i]);
+            }
+        }
+        console.log({arr,
+            arraySinDuplicados});
+    }
+    EliminarDuplicados(["x", 10, "x", 2, "10", 10, true, true]);
+}
 
 //Version2
 {
