@@ -92,13 +92,27 @@
 
 //Version2
 {
-
+    
 }
 
 //26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
 //Version1
 {
+    function Promedio(arr = undefined)
+    {
+        if(arr === undefined) return console.warn("No ingesaste un arreglo de numeros.");
+        if(!Array.isArray(arr)) return console.error("El valor que ingresastes no es un arreglo.");
+        if(arr.length===0) return console.error("El arreglo esta vacio.");
 
+        let amount = 0;
+        for(num of arr)
+        {
+            amount += num;
+        }
+        return console.log("El promedio es: "+(amount/arr.length));
+    }
+    Promedio();
+    Promedio([9,8,7,6,5,4,3,2,1,0]);
 }
 
 //Version2
