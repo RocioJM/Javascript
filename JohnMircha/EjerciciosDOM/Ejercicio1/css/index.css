@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+}
+
+header{
+    width: 100%;
+    
+}
+nav{
+    background-color: yellow;
+    width: 100%;
+    text-align: center;
+}
+
+nav h1{
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: "Pacifico", cursive;
+    font-size: 40px;
+    color: peru;
+}
+
+.hamburger{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+section{
+    width: 100%;
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
